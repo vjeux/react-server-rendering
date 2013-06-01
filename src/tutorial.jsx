@@ -1,7 +1,14 @@
 /** @jsx React.DOM */
 
 // Added these two lines since we're in a Node environment.
+
 var React = require('react-tools').React;
+
+if (typeof window !== 'undefined') {
+  var fs = require('fs');
+  fs.readdirSync = function() { return []; };
+}
+
 var Showdown = require('showdown');
 
 // The rest of the example is unchanged until the very end.
@@ -92,10 +99,17 @@ var CommentForm = React.createClass({
   }
 });
 
-//React.renderComponent(
-//  <CommentBox url="/comments.json" pollInterval={2000} />,
-//  document.getElementById('container')
-//);
+function getInstance() {
+    return <CommentBox url="/comments.json" pollInterval={2000} />;
+}
 
-var ReactServerRendering = require('./ReactServerRendering');
-ReactServerRendering.renderComponentToString(<CommentBox url="/comments.json" pollInterval={2000} />, console.log.bind(console));
+if (typeof window !== 'undefined') {
+  React.renderComponent(
+    getInstance(),
+    document.getElementById('container')
+  );
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = getInstance;
+}
