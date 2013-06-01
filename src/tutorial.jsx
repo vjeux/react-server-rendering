@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 
-// Added these two lines since we're in a Node environment.
+// This part is changed from the original tutorial to support Node:
 
 var React = require('react-tools').React;
 
@@ -101,10 +101,15 @@ var CommentForm = React.createClass({
   }
 });
 
+// Here are some more changes from the example (the rest is unchanged):
+
+// just used so we don't have to repeat construction code everywhere
 function getInstance() {
     return <CommentBox url="/comments.json" pollInterval={2000} />;
 }
 
+// If in browser, render client side. It'll look to see if there is
+// markup already there, if so, it'll only attach event listeners.
 if (typeof window !== 'undefined') {
   React.renderComponent(
     getInstance(),
@@ -112,6 +117,7 @@ if (typeof window !== 'undefined') {
   );
 }
 
+// If in commonjs env, export the builder function
 if (typeof module !== 'undefined') {
   module.exports = getInstance;
 }

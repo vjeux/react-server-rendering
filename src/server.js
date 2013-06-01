@@ -14,6 +14,7 @@ var comments = [{author: 'Pete Hunt', text: 'Hey there!'}];
 app.use('/', express.static(__dirname));
 app.use(express.bodyParser());
 
+// Show README if people go to /
 app.get('/', function(req, res) {
   res.setHeader('Content-Type', 'text/plain');
   res.send(fs.readFileSync(__dirname + '/../README.md'));
