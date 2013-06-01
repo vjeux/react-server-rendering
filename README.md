@@ -1,29 +1,16 @@
 # React server rendering demo
 
-This takes the React tutorial and renders it to a string.
+`npm install`
 
-## How to use from the command line
+To render on the command line:
 
-Ensure you have 0.3.2:
+`make commandline`
 
-`npm install react-tools`
+Then:
 
-Desugar the example:
+`make server`
 
-`jsx src/tutorial.jsx > src/tutorial.js`
+Go to [http://localhost:3000/client-rendered](http://localhost:3000/client-rendered) to see plain old client rendered.
+Then go to [http://localhost:3000/server-rendered](http://localhost:3000/server-rendered) to see it server rendered.
 
-See HTML printed to your console:
-
-`node src/tutorial.js`
-
-## How to use from the web
-
-`npm install react-tools`
-
-`jsx src/tutorial.jsx > src/tutorial.js`
-
-`browserify src/tutorial.js > src/tutorial-browser.js`
-
-`node src/server.js`
-
-Open `http://localhost:3000/` in a web browser.
+Try turning off JS and revisiting those URLs.
