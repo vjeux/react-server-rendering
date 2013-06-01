@@ -12,7 +12,8 @@ server rendering bindings for React on top of this, be my guest!
 We've tried to do a pretty good job of keeping React modules with minimal
 internal state, but if you were to roll this out in production you would
 need to make sure that you clear your module cache between requests,
-otherwise you could have a privacy bug where info leaks between requests.
+otherwise you could have a privacy bug where info leaks between requests
+because some state may be lingering inside of your modules.
 [contextify](https://github.com/brianmcd/contextify) may be good for this.
 
 ## How to use:
