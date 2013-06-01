@@ -16,6 +16,17 @@ otherwise you could have a privacy bug where info leaks between requests
 because some state may be lingering inside of your modules.
 [contextify](https://github.com/brianmcd/contextify) may be good for this.
 
+## What is this?
+
+This is a demo of running React on the server to generate the HTML and send
+it down. JavaScript only attaches the event listeners and leaves the markup
+intact.
+
+## Why do I want this?
+
+Googlebot, and initial page load times, and overall flexibility in how you
+can build your app.
+
 ## How to use:
 
 First:
