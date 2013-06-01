@@ -47,3 +47,11 @@ Then go to [http://localhost:3000/server-rendered](http://localhost:3000/server-
 Try turning off JS and revisiting those URLs.
 
 Also you can try running multiple tabs to see the live updating in the demo.
+
+## Why can't I see the comments with JavaScript disabled?
+
+Because we're fetching them via AJAX. You could just as easily preload your comments
+by designing a fetching API that works on the client and the server, and set up the
+initial state of your component on the server such that the commments are there
+on initial load. But I wanted to take an unmodified example that was not designed
+for server rendering and add server rendering to it.
