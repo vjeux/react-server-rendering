@@ -22,6 +22,10 @@ This is a demo of running React on the server to generate the HTML and send
 it down. JavaScript only attaches the event listeners and leaves the markup
 intact.
 
+We don't use any sort of fake DOM (jsdom, phantom etc) -- we've just designed
+React from the ground up to not depend on the browser. So it's fast and
+memory efficient.
+
 ## Why do I want this?
 
 Googlebot, and initial page load times, and overall flexibility in how you
