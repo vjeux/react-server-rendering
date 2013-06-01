@@ -5,6 +5,8 @@
 var React = require('react-tools').React;
 
 if (typeof window !== 'undefined') {
+  // Showdown doesn't know how to be browserified, so I have to sadly
+  // do this.
   var fs = require('fs');
   fs.readdirSync = function() { return []; };
 }
