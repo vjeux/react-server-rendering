@@ -1,5 +1,7 @@
 # React server rendering demo
 
+First:
+
 `npm install`
 
 To render on the command line:
