@@ -14,7 +14,6 @@ var comments = [{author: 'Pete Hunt', text: 'Hey there!'}];
 app.use('/', express.static(__dirname));
 app.use(express.bodyParser());
 
-
 // Standard client-rendered; just return static HTML
 app.get('/client-rendered', function(req, res) {
   res.setHeader('Content-Type', 'text/html');
