@@ -11,3 +11,7 @@ commandline: build
 
 serve: build
 	node src/server.js
+
+clean:
+	rm src/tutorial.js
+	rm src/tutorial-browser.js
