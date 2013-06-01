@@ -43,7 +43,7 @@ To render on the command line:
 
 And to run the demo server:
 
-`make server`
+`make serve`
 
 Go to [http://localhost:3000/client-rendered](http://localhost:3000/client-rendered) to see plain old client rendered.
 Then go to [http://localhost:3000/server-rendered](http://localhost:3000/server-rendered) to see it server rendered.
